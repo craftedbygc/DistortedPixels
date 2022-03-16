@@ -100,6 +100,10 @@ export default class Sketch {
     this.gui.add(this.settings, "mouse", 0, 1, 0.01);
     this.gui.add(this.settings, "strength", 0, 1, 0.01);
     this.gui.add(this.settings, "relaxation", 0, 1, 0.01);
+
+    if (new URLSearchParams(window.location.search).has('gui')) {
+      document.querySelector('.lil-gui').style.visibility = 'visible'
+    }
   }
 
   setupResize() {
